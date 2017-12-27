@@ -1,0 +1,16 @@
+compile :multicast
+
+multicast :multicast.cpp
+        g++ -c multicast.cpp -pthread -o multicast
+
+runmulticast1:
+        ./multicast 1 8080 8081 8082 127.0.0.1
+		
+runmulticast2:
+        ./multicast 2 8080 8081 8082 127.0.0.1
+		
+runmulticast3:
+        ./multicast 3 8080 8081 8082 127.0.0.1
+
+clean :
+        rm multicast
